@@ -5,7 +5,7 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(bg.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -17,7 +17,6 @@
     margin: auto;
 }
 
-
 .icon{
     width: 200px;
     float: left;
@@ -25,6 +24,11 @@
 }
 
 .logo{
-    color: #ff7200
-    
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
 }
