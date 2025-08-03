@@ -100,3 +100,14 @@ ul li a:hover{
     transition: 0.2s ease;
     cursor: pointer;
 }
+
+.menu ul li a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.menu ul li a i {
+  font-size: 15px;
+}
+
