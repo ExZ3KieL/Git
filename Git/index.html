@@ -22,20 +22,22 @@
                 </ul>
             </div>
         </div>
-        <div class="slider">
-            <img src="img1.jpg" class="slide" style="display:block;">
-            <img src="img2.jpg" class="slide" style="display:none;">
-            <img src="img3.jpg" class="slide" style="display:none;">
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
+       <div class="slider">
+    <img src="img1.jpg" class="slide active">
+    <img src="img2.jpg" class="slide">
+    <img src="img3.jpg" class="slide">
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
     </div>
 </body>
 <script>
     let current = 0;
     const slides = document.querySelectorAll('.slide');
     function showSlide(idx) {
-        slides.forEach((img, i) => img.style.display = i === idx ? 'block' : 'none');
+        slides.forEach((img, i) => {
+            img.classList.toggle('active', i === idx);
+        });
     }
     document.querySelector('.prev').onclick = function() {
         current = (current - 1 + slides.length) % slides.length;
