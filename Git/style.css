@@ -161,7 +161,22 @@ ul li a:hover{
 }
 .slider {
     position: relative;
-    height: 300px;
+    height: 300px; 
     overflow: hidden;
 }
 
+.slider-description {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 60%; /* Adjust as needed */
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 3;
+}

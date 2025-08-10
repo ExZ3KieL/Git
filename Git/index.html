@@ -11,33 +11,41 @@
     <div class="main">
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo">ASHWeb</h2>
+                <h2 class="logo">ASHS</h2>
             </div>
             <div class="menu">
                 <ul>
                     <li><a href="#"><i class="fas fa-home"></i> HOME</a></li>
                     <li><a href="#"><i class="fas fa-info-circle"></i> MEMORIES</a></li>
                     <li><a href="#"><i class="fas fa-paint-brush"></i> SCHOOL LIFE</a></li>
-                    <li><a href="#"><i class="fas fa-cogs"></i> CONTACT US</a></li>
+                   <li><a href="contact.html"><i class="fas fa-cogs"></i> CONTACT US</a></li>
                 </ul>
             </div>
         </div>
        <div class="slider">
-    <img src="img1.jpg" class="slide active">
-    <img src="img2.jpg" class="slide">
-    <img src="img3.jpg" class="slide">
+    <img src="img1.jpg" class="slide active" alt="Description 1">
+    <img src="img2.jpg" class="slide" alt="Description 2">
+    <img src="img3.jpg" class="slide" alt="Description 3">
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
+    <div class="slider-description" id="slider-description">Description 1</div>
 </div>
     </div>
 </body>
 <script>
     let current = 0;
     const slides = document.querySelectorAll('.slide');
+    const descriptions = [
+        "Desc",
+        "Desc",
+        "Desc"
+    ];
+    const descElem = document.getElementById('slider-description');
     function showSlide(idx) {
         slides.forEach((img, i) => {
             img.classList.toggle('active', i === idx);
         });
+        descElem.textContent = descriptions[idx];
     }
     document.querySelector('.prev').onclick = function() {
         current = (current - 1 + slides.length) % slides.length;
