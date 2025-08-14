@@ -28,7 +28,7 @@
     <img src="img3.jpg" class="slide" alt="Description 3">
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
-    <div class="slider-description" id="slider-description">Description 1</div>
+    <div class="slider-description" id="slider-description">Specialized Subjects</div>
 </div>
     </div>
 </body>
@@ -36,10 +36,11 @@
     let current = 0;
     const slides = document.querySelectorAll('.slide');
     const descriptions = [
-        "Desc",
-        "Desc",
-        "Desc"
+    "Specialized Subjects",
+    "Impact Subjects",
+    "Impactful Memories"
     ];
+
     const descElem = document.getElementById('slider-description');
     function showSlide(idx) {
         slides.forEach((img, i) => {
@@ -55,5 +56,13 @@
         current = (current + 1) % slides.length;
         showSlide(current);
     };
+
+    // Add this block to enable clicking on slides
+    slides.forEach((img, idx) => {
+        img.addEventListener('click', function() {
+            current = idx;
+            showSlide(current);
+        });
+    });
 </script>
 </html>
