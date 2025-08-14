@@ -11,58 +11,75 @@
     height: 100vh;
 }
 
-.navbar{
-    width: 1200px;
+.navbar {
+    width: 100%;
     height: 75px;
-    margin: auto;
-}
-
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo{
-    color: #ff7200;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
-    margin-top: 5px
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-}
-
-ul{
-    float: left;
+    background: rgba(30, 30, 30, 0.85);
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 175px; 
+    box-sizing: border-box;
+}
+
+.icon {
+    height: 70px;
+    display: flex;
     align-items: center;
 }
 
-ul li{
-    list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
-}
-
-ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-family: Arial;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
-}
-
-ul li a:hover{
+.logo {
     color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: px;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    background: transparent;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0; 
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    height: 75px;
+}
+
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 18px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu ul li a:hover {
+    background: #ff7200;
+    color: #fff;
 }
 
 .search{
@@ -320,3 +337,6 @@ p {
   margin-right: auto;
   text-align: center;
 }
+
+.slider {
+    margin-top: 80px; 
