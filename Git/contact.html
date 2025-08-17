@@ -8,52 +8,19 @@
 <body>
     <h1>Get in touch with us.</h1>
     <p>Fill out the form below to contact us</p>
-    <form id="contact-form" action="https://submit-form.com/12RGXMY0C" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Name" required />
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Email" required />
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <div id="success-message" style="display:none; color:green; margin-top:20px;">
-      Thank you! Your message has been sent.
-    </div>
-    <div id="error-message" style="
-  display:none; 
-  color: #fff; 
-  font-size: 1.3em; 
-  font-weight: bold; 
-  margin-top: 20px; 
-  padding: 20px 30px; 
-  border-radius: 8px; 
-  text-align: center; 
-  max-width: 400px; 
-  margin-left: auto; 
-  margin-right: auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-">
-  Sorry, there was a problem sending your message. Please try again.
+
+<form action="https://submit-form.com/12RGXMY0C" class="contact-form-dark">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="Name" required />
+  
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="Email" required />
+  
+  <label for="message">Message</label>
+  <textarea id="message" name="message" placeholder="Message" required></textarea>
+  
+  <button type="submit">Send Message</button>
+</form>
 </div>
-    <script>
-      document.getElementById('contact-form').onsubmit = function(e) {
-        e.preventDefault();
-        fetch(this.action, {
-          method: 'POST',
-          body: new FormData(this),
-          headers: { 'Accept': 'application/json' }
-        }).then(response => {
-          if (response.ok) {
-            document.getElementById('contact-form').style.display = 'none';
-            document.getElementById('success-message').style.display = 'block';
-          } else {
-            document.getElementById('error-message').style.display = 'block';
-          }
-        }).catch(() => {
-          document.getElementById('error-message').style.display = 'block';
-        });
-      };
-    </script>
 </body>
 </html>
