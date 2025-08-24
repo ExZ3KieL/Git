@@ -384,3 +384,53 @@ p {
     width: 90%;
   }
 }
+
+/* Schoolife Section */
+.schoollife-hero {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+.schoollife-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.schoollife-hero p {
+    font-size: 1.2em;
+}
+
+/* Activities */
+.schoollife-activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+.activity-card {
+    background: #d3b396;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.activity-card i {
+    color: #ff7e00; /* orange icons */
+    margin-bottom: 15px;
+}
+
+/* Timeline */
+.schoollife-timeline {
+    background: #d3b396; 
+    padding: 50px 20px;
+    text-align: center;
+}
+.schoollife-timeline h2 {
+    margin-bottom: 20px;
+    color: #ff7e00;
+}
+.schoollife
